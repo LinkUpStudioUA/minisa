@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  enumerize :role, in: %i[buyer seller admin], scope: true
+  enumerize :role, in: %i[buyer seller], default: :buyer, scope: true
 
   monetize :balance_cents
 
