@@ -1,0 +1,7 @@
+en:
+  admin:
+    actions:
+      approve_request:
+        menu: 'Approve'
+        title: 'Approve request...'
+        breadcrumb: 'Approvement'
