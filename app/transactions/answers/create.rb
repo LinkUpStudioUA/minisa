@@ -11,14 +11,8 @@ module Answers
     step :update_request
 
     def update_seller(service_answer:)
-      service_request = service_answer.service_request
-      seller = service_request.seller
-      seller.balance += service_request.service.price_with_discount(seller.commission_percentage)
-      if seller.save
-        Success(service_answer: service_answer)
-      else
-        Failure(seller.errors.full_messages)
-      end
+      # TODO: implement
+      Success(service_answer: service_answer)
     end
 
     def update_request(service_answer:)
