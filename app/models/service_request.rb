@@ -18,6 +18,6 @@ class ServiceRequest < ApplicationRecord
   validates :text, presence: true
 
   def could_be_canceled?
-    status.submitted? && updated_at < 7.days.ago
+    status.submitted? && updated_at > 7.days.ago
   end
 end
